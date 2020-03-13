@@ -11,10 +11,22 @@
             return '<span class="mini '+str.replace(/\[\:/gim,'').replace(/\:\]/gim,'')+'"></span>' 
       });
   }
+  // check if ngoai screen
+  function check(e) {
+      try {
+          var elementTop = e.offset().top;
+          var elementBottom = elementTop + e.outerHeight();
+          var viewportTop = $(window).scrollTop();
+          var viewportBottom = viewportTop + $(window).height();
+          return elementBottom > viewportTop && elementTop < viewportBottom;
+      } catch(e) {
+        return false;
+      }
+  }
   // LAM DEP CODE 
   function getLanguageScript(language) {
       try {
-          $.getScript('https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-' + language + '.min.js').done(function(){
+          $.getScript('//cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-' + language + '.min.js').done(function(){
           Prism.highlightAll();
           });
       } catch (e) {}
@@ -80,28 +92,32 @@
         $('[data-label]').each(
           function(){
             var label = $(this).attr('data-label').trim();
+            if (label == "" ) { label = 'notfound'}
             var maxResults;
             var url = '/feeds/posts/summary/-/' + label + '?alt=json-in-script&max-results=' + (($(this).attr('max-results')) ? $(this).attr('max-results') : '4');
             var $this = $(this) ;
-            $.ajax({
-                url: url,
-                type: "get",
-                dataType: "jsonp",
-                success: function(e) {
-                    $this.removeAttr('data-label');
-                    var feed = e.feed;
-                    if (feed.entry) {
-                        var num_post = feed.entry.length;
-                        for (i = 0; i < num_post; i++) {
-                            var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
-                            var title = feed.entry[i].title.$t;
-                            $('<li><a href="' + href + '">' + title + '</a></li>').appendTo($this.next());
-                        }
-                    } else {
-                        $('(-.-) Không có bài nào được tìm thấy').insertAfter($this);;
-                    }
-                }
-            });
+            try {
+              $.ajax({
+                  url: url,
+                  type: "get",
+                  dataType: "jsonp"})
+                  .done( function(e) {
+                      $this.removeAttr('data-label');
+                      var feed = e.feed;
+                      if (feed.entry) {
+                          var num_post = feed.entry.length;
+                          for (i = 0; i < num_post; i++) {
+                              var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
+                              var title = feed.entry[i].title.$t;
+                              $('<li><a href="' + href + '">' + title + '</a></li>').appendTo($this.next());
+                          }
+                      } else {
+                          $('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>').appendTo($this.next());
+                      }
+                  }
+              )
+              .fail( function(e) {$('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>').appendTo($this.next());});
+            } catch(e) {};
         })
       })();
       /* đóng mở search */
@@ -128,7 +144,7 @@
       // goi ham lam dep code
       (function() {
           if ($('code').length) {
-              $.getScript('https://truong-huong.github.io/nullshell-js/main.js').done(function() {
+              $.getScript('//cdn.jsdelivr.net/gh/truong-huong/nullshell-js/main.js').done(function() {
                   $('code').each(function() {
                     try {
                       var language = $(this).attr('class').trim().replace('language-', '').trim();
