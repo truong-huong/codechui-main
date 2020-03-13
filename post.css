@@ -16,6 +16,7 @@ blockquote p::before {
   margin: 0 5px;
   padding:0 10px;
   width: 20px;
+  font-size: x-large;
 }
 .warning p::before {
 	content: "\f071";
