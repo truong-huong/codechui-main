@@ -20,7 +20,7 @@ blockquote p::before {
 }
 .warning p::before {
 	content: "\f071";
-	color: #FFFF00;
+	color: #FFCC01;
 }
 .ban p:before {
 	content: "\f05e";
