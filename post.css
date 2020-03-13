@@ -1,4 +1,6 @@
 .postBody blockquote {
 	padding: 10px;
 	border-left:solid #000;
+	background-color: #f3f3f3;
+	color:#222;
 }
