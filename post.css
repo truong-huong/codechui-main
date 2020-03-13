@@ -3,16 +3,16 @@
 	border-left:solid #000;
 	background-color: #f3f3f3;
 	color:#222;
-	margin: 0;
+	margin: 10px 0;
 	font-size: 16px;
 }
 blockquote p {
 	margin: 0;
 	padding: 0;
 }
-blockquote p::before {
+p::before {
 	font-family: 'Font Awesome 5 Free';
 }
-blockquote.warning p::before {
+.warning p::before {
 	content: "\f06a";
 }
