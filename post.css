@@ -1,3 +1,4 @@
 .postBody blockquote {
-	padding: 20px;
+	padding: 10px;
+	border-left: #000;
 }
