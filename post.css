@@ -10,9 +10,10 @@ blockquote p {
 	margin: 0;
 	padding: 0;
 }
-p::before {
-	font-family: 'Font Awesome 5 Free';
+blockquote p::before {
+  font-family: 'Font Awesome 5 Free';
 }
 .warning p::before {
-	content: "\f06a";
+	font-family: 'Font Awesome 5 Free';
+	content: "\f071";
 }
