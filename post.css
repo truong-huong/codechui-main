@@ -30,7 +30,7 @@ blockquote p::before {
 	content: "\f164";
 	color: #596D9F;
 }
-.wikiepedia p:before {
+.wikipedia p:before {
 	content: "\f266";
 	color: #000;
 }
