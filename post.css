@@ -11,11 +11,21 @@ blockquote p {
 	padding: 0;
 }
 blockquote p::before {
+	margin-bottom:5px;
   font-family: FontAwesome;
-  margin: 5px;
-  padding:10px;
+  margin: 0 5px;
+  padding:0 10px;
   width: 20px;
 }
 .warning p::before {
 	content: "\f071";
+	color: #FFFF00;
+}
+.ban p:before {
+	content: "\f05e";
+	color:#CF1F25;
+}
+.like p:before {
+	content: "\f164";
+	color: #596D9F;
 }
