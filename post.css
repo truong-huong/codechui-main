@@ -40,7 +40,6 @@ blockquote {
   background-color: #f3f3f3;
   color:#222;
   margin: 10px 0;
-  font-size: 16px;
 }
 blockquote p {
   margin: 0;
@@ -68,9 +67,9 @@ blockquote p:before {
   min-width: 160px;
   margin: 5px;
 }
-.postBody a[href]{
+a[href]{
   color: #d25801;
-  display: inline-block;
+ 
   text-decoration: none;
   border-bottom: dashed 1px #d25801;
   margin: 0 5px;
@@ -131,10 +130,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-weight: bolder;
   margin-bottom: 20px;
 }
-.postBody h2 , .postBody h3 , .postBody h4,.postBody h5, .postBody h6 {
-  margin-top: 20px;
-}
-.postBody h3 ,.postBody h4 ,.postBody h5,.postBody h6{
+.postBody h3 , h4 , h5,h6{
   margin-left: 20px;
 }
 .postBody h1 {
@@ -164,6 +160,8 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 .postBody h6 {
   font-size: 15px;
 }
+/** heets */
+
 code {
   padding:2px 5px;
 }
