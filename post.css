@@ -1,8 +1,10 @@
 .postBody a {
   color: #337ab7;
+  font-weight: bold;
 }
 .postBody a , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
+  font-size: initial;
 }
 .postBody a:visited {
   color: #000;
@@ -76,6 +78,7 @@ blockquote p:before {
 .btn a {
   width: 100%;
   text-transform: uppercase;
+  font-weight: bolder;
   padding: 10px 10px 10px 0;
   color: #fff;
 }
