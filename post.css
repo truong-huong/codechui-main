@@ -32,14 +32,15 @@ blockquote p::before {
   width: 160px;
   min-width: 160px;
   margin: 5px;
+  padding: 10px;
 }
-.btn span {
+.btn a {
   width: 100%;
   text-transform: uppercase;
   font-weight: bolder;
-  padding: 10px 10px 10px 0;
+  background-color: #E77E22; 
 }
-.btn span::before {
+.btn a::before {
   position: relative;
   margin-right: 5px;
   margin-left: 0px;
@@ -49,11 +50,12 @@ blockquote p::before {
   border-top-left-radius: 5px;
   background-color: #E77E22;
   font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 }
-.download-btn span::before {
+.download-btn::before {
   content: "\f007";
 }
-.preview-btn span::before {
+.preview-btn::before {
   content: "\f06e";
 }
 .btn-group {
