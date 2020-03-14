@@ -312,9 +312,11 @@ pre[class*="language-"] {
 .comment-form-reply { 
   flex-direction: column; 
 } 
-      .comments { 
+.comments { 
   margin-top:50px;  
-  flex-direction: column; 
+  flex-direction: column;
+  margin-bottom:25px;
+  border:solid 2px;
 } 
 
 .first {  
