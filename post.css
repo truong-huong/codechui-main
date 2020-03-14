@@ -7,7 +7,7 @@
 .postBody a {
   color: #337ab7;
   font-weight: bold;
-  font-size: initial;
+  font-size: inherit;
 }
 div > blockquote:before {
   margin-bottom:5px;
