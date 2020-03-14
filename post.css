@@ -316,7 +316,7 @@ pre[class*="language-"] {
   margin-top:50px;  
   flex-direction: column;
   margin-bottom:25px;
-  border:solid 2px;
+  border-bottom:solid 2px;
 } 
 
 .first {  
