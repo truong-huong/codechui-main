@@ -28,13 +28,6 @@ div > blockquote:before {
   font-size: 17px;
   font-weight: 900;
 }
-blockquote {
-  border-left: solid 2px;
-  padding: 15px;
-  margin-left: 0;
-  color: #222;
-  background-color: #f3f3f3;
-}
 .warning:before {
   content: "\f071";
   color: #FFCC01;
@@ -54,7 +47,7 @@ blockquote {
 /* nut butto */
 blockquote {
   padding: 15px;
-  border-left:solid #000;
+  border-left: solid 2px;
   background-color: #f3f3f3;
   color:#222;
   margin: 10px 0;
