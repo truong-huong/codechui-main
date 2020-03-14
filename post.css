@@ -5,13 +5,12 @@
 .postBody a:before , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
-.postBody a:visited {
-  color: #000;
-}
-.postBody a {
-  color: #337ab7;
-  font-weight: bold;
-  font-size: inherit;
+a[href]{
+  color: #d25801;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: dashed 1px #d25801;
+  margin: 0 5px;
 }
 .postBody h1 {
   font-weight:bolder;
@@ -100,6 +99,9 @@ blockquote {
   margin:20px;
 }
 /* phong to chu */
+b {
+  display: block;
+}
 b>ins{
   text-decoration-line: none;
   color: #903;
@@ -388,12 +390,11 @@ pre[class*="language-"] {
 .comment-intro {  
   align-items:center; 
   justify-content:center; 
-  border:dashed 2px;  
+  border-bottom:dashed 2px;  
 } 
 
 .comment-intro span { 
-
-  padding:20px; 
+  padding:15px; 
   font-weight:bolder; 
   font-size:22px; 
 } 
