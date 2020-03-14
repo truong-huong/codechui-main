@@ -1,4 +1,4 @@
-.postBody a , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
+.postBody a:before , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
 
@@ -68,7 +68,7 @@ blockquote p:before {
   min-width: 160px;
   margin: 5px;
 }
-a[href]{
+.postBody a[href]{
   color: #d25801;
   display: inline-block;
   text-decoration: none;
@@ -131,7 +131,10 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-weight: bolder;
   margin-bottom: 20px;
 }
-.postBody h3 , h4 , h5,h6{
+.postBody h2 , .postBody h3 , .postBody h4,.postBody h5, .postBody h6 {
+  margin-top: 20px;
+}
+.postBody h3 ,.postBody h4 ,.postBody h5,.postBody h6{
   margin-left: 20px;
 }
 .postBody h1 {
