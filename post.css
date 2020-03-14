@@ -76,7 +76,6 @@ blockquote p:before {
 .btn a {
   width: 100%;
   text-transform: uppercase;
-  font-weight: bolder;
   padding: 10px 10px 10px 0;
   color: #fff;
 }
