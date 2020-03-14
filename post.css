@@ -117,7 +117,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 }
 .postBody h1 ,.postBody h2 ,.postBody h3 ,.postBody h4 ,.postBody h5 ,.postBody h6 {
   font-weight: bolder;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .postBody h1 {
   font-size: 25px;
