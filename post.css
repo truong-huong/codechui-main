@@ -114,6 +114,11 @@ b>ins{
 h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
   font-weight: 900;
+  margin: 0 5px;
+  padding:0 10px;
+  width: 20px;
+  font-size: x-large;
+  font-weight: 900;
 }
 .postBody h1 {
   font-size: 25px;
