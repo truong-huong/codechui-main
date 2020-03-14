@@ -120,12 +120,12 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   margin-bottom: 20px;
 }
 .postBody h1 {
-  font-size: 25px;
+  font-size: 24px;
   width: 100%;
   text-align: center;
 }
 .postBody h2 {
-  font-size: 23px;
+  font-size: 21px;
   color: #596D9F;
   border-bottom: solid 1px;
   padding-bottom: 2px;
@@ -135,16 +135,16 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   margin-right: 5px;
 }
 .postBody h3 {
-  font-size: 21px;
-}
-.postBody h4 {
   font-size: 19px;
 }
+.postBody h4 {
+  font-size: 17px;
+}
 .postBody h5 {
-  font-size: 20px
+  font-size: 16px
 }
 .postBody h6 {
-  font-size: 25px;
+  font-size: 15px;
 }
 /* lam dep code */
 code[class*="language-"],
