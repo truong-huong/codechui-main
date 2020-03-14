@@ -73,7 +73,7 @@ blockquote p:before {
   border-bottom: dashed 1px #d25801;
   margin: 0 5px;
 }
-.btn a {
+.btn a[href] {
   width: 100%;
   text-transform: uppercase;
   font-weight: bolder;
