@@ -160,7 +160,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-size: 15px;
 }
 code {
-  font-weight:bold;
+  padding:2px 5px;
 }
 /* lam dep code */  
 code[class*="language-"], 
