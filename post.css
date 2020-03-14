@@ -23,6 +23,7 @@ blockquote {
   margin-left: 0;
   color: #222;
   background-color: #f3f3f3;
+  width:100%;
 }
 .warning:before {
   content: "\f071";
