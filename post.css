@@ -1,31 +1,21 @@
-.postBody {
-  display:flex;
-  flex-direction: column;
-}
-.postBody a:before , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
+.postBody a , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
-a[href]{
-  color: #d25801;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: dashed 1px #d25801;
-  margin: 0 5px;
-}
-.postBody h1 {
-  font-weight:bolder;
-}
-.postBody img {
-  margin:20px;
-  border-radius:10px;
-}
+
 div > blockquote:before {
   margin-bottom:5px;
   margin: 0 5px;
   padding:0 10px;
   width: 20px;
-  font-size: 17px;
+  font-size: x-large;
   font-weight: 900;
+}
+blockquote {
+  border-left: solid 2px;
+  padding: 15px;
+  margin-left: 0;
+  color: #222;
+  background-color: #f3f3f3;
 }
 .warning:before {
   content: "\f071";
@@ -44,12 +34,25 @@ div > blockquote:before {
   color: #000;
 }
 /* nut butto */
-blockquote {
+.postBody blockquote {
   padding: 15px;
-  border-left: solid 2px;
+  border-left:solid #000;
   background-color: #f3f3f3;
   color:#222;
   margin: 10px 0;
+  font-size: 16px;
+}
+blockquote p {
+  margin: 0;
+  padding: 0;
+}
+blockquote p:before {
+  margin-bottom:5px;
+  margin: 0 5px;
+  padding:0 10px;
+  width: 20px;
+  font-size: x-large;
+  font-weight: 900;
 }
 /* nut download preview */
 .btn {
@@ -62,19 +65,28 @@ blockquote {
   cursor: pointer;
   list-style: none;
   width: 160px;
-  font-size: 16px;
   min-width: 160px;
   margin: 5px;
+}
+a[href]{
+  color: #d25801;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: dashed 1px #d25801;
+  margin: 0 5px;
 }
 .btn a {
   width: 100%;
   text-transform: uppercase;
   font-weight: bolder;
-  padding: 10px 10px 10px 0;
+  padding: 7px 0;
   color: #fff;
+  margin: 0;
+  display: block;
+  border-bottom: none;
 }
 .btn a:before {
-  position: relative;
+  margin: 0;
   margin-right: 5px;
   margin-left: 0px;
   padding:10px;
@@ -98,17 +110,16 @@ blockquote {
 .btn-group .btn {
   margin:20px;
 }
-/* phong to chu */
 b {
   display: block;
 }
+/* phong to chu */
 b>ins{
   text-decoration-line: none;
   color: #903;
   float: left;
-  font-family: Georgia;
   font-size: 50px;
-  line-height: 30px;
+  line-height: 45px;
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
@@ -119,16 +130,14 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 .postBody h1 ,.postBody h2 ,.postBody h3 ,.postBody h4 ,.postBody h5 ,.postBody h6 {
   font-weight: bolder;
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 .postBody h3 , h4 , h5,h6{
   margin-left: 20px;
 }
 .postBody h1 {
-  font-size: 25px;
+  font-size: 24px;
   width: 100%;
   text-align: center;
-  margin-top: 0;
 }
 .postBody h2 {
   font-size: 21px;
@@ -138,7 +147,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 }
 .postBody h2:before {
   content: "\f5a6";
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .postBody h3 {
   font-size: 19px;
