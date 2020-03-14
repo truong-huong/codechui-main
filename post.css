@@ -305,12 +305,12 @@ pre[class*="language-"] {
 } 
 /* comment */ 
 /* comments */  
-.comment-form { 
+.comment-form , .comment-form-reply { 
   position: relative;
   width: 100%;
   height: 0;
 } 
-.comment-form iframe {
+.comment-form iframe , .comment-form-reply iframe{
   position: absolute;
  top: 0;
  left: 0;
