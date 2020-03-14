@@ -1,6 +1,6 @@
 .postBody a {
   color: #337ab7;
-  font-weight: bolder;
+  font-weight: 900;
   text-decoration: none;
 }
 .postBody a , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
