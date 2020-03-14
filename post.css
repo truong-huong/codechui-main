@@ -133,6 +133,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-size: 24px;
   width: 100%;
   text-align: center;
+  margin-bottom: 30px;
 }
 .postBody h2 {
   font-size: 21px;
