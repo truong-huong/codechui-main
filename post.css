@@ -309,7 +309,6 @@ pre[class*="language-"] {
   position: relative;
   width: 100%;
   height: auto;
-  padding-bottom: 56.25%;
 } 
 .comment-form iframe , .comment-form-reply iframe{
   position: absolute;
