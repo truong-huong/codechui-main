@@ -1,17 +1,51 @@
+/* blockquote */
+div > blockquote:before {
+  margin-bottom:5px;
+  font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
+  margin: 0 5px;
+  padding:0 10px;
+  width: 20px;
+  font-size: x-large;
+  font-weight: 900;
+}
+blockquote {
+  border-left: solid 2px;
+  padding: 15px;
+  margin-left: 0;
+  color: #222;
+  background-color: #f3f3f3;
+}
+.warning:before {
+  content: "\f071";
+  color: #FFCC01;
+}
+.ban:before {
+  content: "\f05e";
+  color:#CF1F25;
+}
+.like:before {
+  content: "\f164";
+  color: #596D9F;
+}
+.wikipedia:before {
+  content: "\f266";
+  color: #000;
+}
+/* nut butto */
 .postBody blockquote {
-	padding: 15px;
-	border-left:solid #000;
-	background-color: #f3f3f3;
-	color:#222;
-	margin: 10px 0;
-	font-size: 16px;
+  padding: 15px;
+  border-left:solid #000;
+  background-color: #f3f3f3;
+  color:#222;
+  margin: 10px 0;
+  font-size: 16px;
 }
 blockquote p {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
-blockquote p::before {
-	margin-bottom:5px;
+blockquote p:before {
+  margin-bottom:5px;
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
   margin: 0 5px;
   padding:0 10px;
@@ -33,13 +67,13 @@ blockquote p::before {
   min-width: 160px;
   margin: 5px;
 }
-.btn span {
+.btn a {
   width: 100%;
   text-transform: uppercase;
   font-weight: bolder;
   padding: 10px 10px 10px 0;
 }
-.btn span::before {
+.btn a:before {
   position: relative;
   margin-right: 5px;
   margin-left: 0px;
@@ -48,12 +82,12 @@ blockquote p::before {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   background-color: #E77E22;
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome\ 5 Free';
 }
-.download-btn span::before {
+.download-btn a:before {
   content: "\f007";
 }
-.preview-btn span::before {
+.preview-btn a:before {
   content: "\f06e";
 }
 .btn-group {
@@ -65,22 +99,47 @@ blockquote p::before {
 .btn-group .btn {
   margin:20px;
 }
-/* nut button */
-.warning p::before {
-	content: "\f071";
-	color: #FFCC01;
+/* phong to chu */
+b>ins{
+  text-decoration-line: none;
+  color: #903;
+  float: left;
+  font-family: Georgia;
+  font-size: 50px;
+  line-height: 30px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
 }
-.ban p:before {
-	content: "\f05e";
-	color:#CF1F25;
+h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
+  font-family: 'Font Awesome\ 5 Free';
 }
-.like p:before {
-	content: "\f164";
-	color: #596D9F;
+.postBody h1 {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
 }
-.wikipedia p:before {
-	content: "\f266";
-	color: #000;
+.postBody h2 {
+  font-size: 23px;
+  color: #596D9F;
+  border-bottom: solid 1px;
+  padding-bottom: 2px;
+}
+.postBody h2:before {
+  content: "\f5a6";
+  margin-right: 5px;
+}
+.postBody h3 {
+  font-size: 21px;
+}
+.postBody h4 {
+  font-size: 19px;
+}
+.postBody h5 {
+  font-size: 20px
+}
+.postBody h6 {
+  font-size: 25px;
 }
 /* lam dep code */
 code[class*="language-"],
