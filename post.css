@@ -67,9 +67,8 @@ blockquote p:before {
   min-width: 160px;
   margin: 5px;
 }
-a[href]{
+.postBody a[href]{
   color: #d25801;
- 
   text-decoration: none;
   border-bottom: dashed 1px #d25801;
   margin: 0 5px;
@@ -78,7 +77,7 @@ a[href]{
   width: 100%;
   text-transform: uppercase;
   font-weight: bolder;
-  padding: 7px 0;
+  padding: 10px 0;
   color: #fff;
   margin: 0;
   display: block;
