@@ -21,4 +21,4 @@ document.addEventListener('scroll', function() {
             el.removeAttribute('data-image');
         }
     });
-})};
+})});
