@@ -13,8 +13,29 @@
   line-height: 1; }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
-
-
+.fa-bars:before {  
+    content: "\f0c9"
+}
+.fa-calendar-alt:before { 
+    content: "\f073"
+}
+.fa-facebook-messenger:before {
+    content: "\f39f";
+}
+.fa-instagram:before {
+    content:"\f16d";
+}
+.fa-music:before { 
+  content:"\f001";
+}
+.facebook-square:before { content:"\f082"} 
+.fa-search:before { content:"\f002"}
+.fa-times:before { content:"\f00d"}
+.fa-copy:before { content:"\f0c5"}
+.fa-eraser:before { content:"\f12d"}
+.fa-reply:before { content:"\f3e5"}
+.fa-user:before { content:"\f007"}
+.fa-folder-open:before { content:"\f07c"}
 /*  */
 
 @font-face {
