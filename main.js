@@ -104,8 +104,7 @@
       }
       return language;
   }
-  var hongtham_style_array = ['//cdn.jsdelivr.net/gh/truong-huong/codechui-main/main.css',
-                                 '//truong-huong.github.io/codechui-main/fontawesome-custom/all.css',
+  var hongtham_style_array = [ '//truong-huong.github.io/codechui-main/fontawesome-custom/all.css',
                                  '//truong-huong.github.io/codechui-main/font-face.css'];
   function loadStyleScript(link){
          var link = link.shift();
