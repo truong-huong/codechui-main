@@ -21,9 +21,15 @@ blockquote {
   content: "\f071";
   color: #FFCC01;
 }
+.ban {
+  color: #eb0f00;
+}
 .ban:before {
   content: "\f05e";
   color:#CF1F25;
+}
+.like {
+  color: #3740ff;
 }
 .like:before {
   content: "\f164";
