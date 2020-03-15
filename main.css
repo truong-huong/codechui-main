@@ -10,7 +10,6 @@ body {
   letter-spacing: normal;
   word-spacing: normal;
 }
-
 a {
   text-decoration:none;
   color:inherit;
@@ -244,6 +243,8 @@ header address {
 
 header address i {
   font-size:x-large;
+  min-width: 20px;
+  min-height: 20px;
 }
 
 header address a {
