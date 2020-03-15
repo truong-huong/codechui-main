@@ -165,7 +165,7 @@
       (function() {
           checkCodeLanguage();
           var hongtham_font_face = '//truong-huong.github.io/codechui-main/font-face.css';
-          var hongtham_font = document.createElement('script');
+          var hongtham_font = document.createElement('link');
           $('head').append(hongtham_font);
           hongtham_font.href = hongtham_font_face ;
       })();
