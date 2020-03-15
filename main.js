@@ -1,3 +1,13 @@
+  // Hàm tạo click ảo 
+  function clickVirtual(el){
+    var evt = new MouseEvent("click", {
+        view: window,
+        bubbles: true,
+        cancelable: true,
+        clientX: 20
+    });
+    el.dispatchEvent(evt);
+  }
   // kiểm tra shortcode
   icons = /\[\:(.*?)\:\]/gim;
 
@@ -165,13 +175,7 @@
               document.getElementById('search').style.display = 'block';
               document.querySelector('header section address').style.display = 'none';
               /* tạo một click event vào khung viết query */
-              var evt = new MouseEvent("click", {
-                  view: window,
-                  bubbles: true,
-                  cancelable: true,
-                  clientX: 20
-              });
-              document.querySelector('#search label').dispatchEvent(evt);
+              clickVirtual(document.querySelector('#search label'));
           });
           document.getElementById('search').addEventListener('focusout', function() {
               this.style.display = 'none';
@@ -182,13 +186,7 @@
       /* đóng mở menu */
       (function() {
           document.querySelector('#close-menu').addEventListener('click', function() {
-            var evt = new MouseEvent("click", {
-                view: window,
-                bubbles: true,
-                cancelable: true,
-                clientX: 20
-            });
-            document.querySelector('#open-menu').dispatchEvent(evt);
+            clickVirtual(document.querySelector('#open-menu'));
           });
           document.querySelector('#open-menu').addEventListener('click', function() {
               var porn =  document.querySelector('nav > div:last-child');
