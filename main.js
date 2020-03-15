@@ -113,33 +113,21 @@
         $('[data-label]').each(
           function(){
             var label = $(this).attr('data-label').trim();
-            if (label == "" ) { label = 'notfound'}
-            var maxResults;
-            var url = '/feeds/posts/summary/-/' + label + '?alt=json-in-script&max-results=' + (($(this).attr('max-results')) ? $(this).attr('max-results') : '4');
-            var $this = $(this) ;
-            try {
-              $.ajax({
-                  url: url,
-                  type: "get",
-                  dataType: "jsonp"})
-                  .done( function(e) {
-                      $this.removeAttr('data-label');
-                      var feed = e.feed;
-                      if (feed.entry) {
-                          var num_post = feed.entry.length;
-                          for (i = 0; i < num_post; i++) {
-                              var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
-                              var title = feed.entry[i].title.$t;
-                              $('<li><a href="' + href + '">' + title + '</a></li>').appendTo($this.next());
-                          }
-                      } else {
-                          $('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>').appendTo($this.next());
-                      }
-                  }
-              )
-              .fail( function(e) {$('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>').appendTo($this.next());});
-            } catch(e) {};
-        })
+            if (label == "" ) { label = 'notfound'};
+            var script = document.createElement('script');
+            $(this).next('ul').append(script);
+
+            script.src = 'https://codechui.blogspot.com/feeds/posts/summary/-/' + label + '?alt=json-in-script&max-results=' + (($(this).attr('max-results')) ? $(this).attr('max-results') : '4')+'&callback=showSidebar';    
+        });
+
+            function showSidebar(callback) {
+              var length = callback.feed.entry.length;
+              (callback.entry) ? function(){
+                var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
+                var title = feed.entry[i].title.$t;
+                doument.write('<li><a href="' + href + '">' + title + '</a></li>');
+              } : function(){document.write('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>')};
+            }
       })();
       /* đóng mở search */
       (function(){
@@ -165,7 +153,6 @@
       // goi ham lam dep code
       (function() {
           checkCodeLanguage();
-     
       })();
     }
   );
