@@ -1,1 +1,24 @@
-$(document).ready(function(){$(".cancel-comment").click(function(){$(".comment-form-reply").hide()}),$("[data-click=reply]").each(function(){$(this).on("click",function(a){a.preventDefault(),$("#comment-editor")[0].src=$(this).attr("data-href"),$(this).parent().parent().next().append($(".comment-form-reply")[0]),$(".comment-form-reply").show()})}),$(document).on("scroll",function(){check($("iframe[data-comment]"))&&($("#enter-comment-form")[0].src=$("iframe[data-comment]").attr("data-comment"),$("iframe[data-comment]").removeAttr("data-comment")),$("img[data-image]").each(function(){check($(this))&&$(this).attr("src",$(this).attr("data-image")).removeAttr("data-image")})})});
+document.addEventListener("DOMContentLoaded", function() {
+// cái này dành cho bài viết và trang tĩnh 
+document.getElementById('cancel-comment').addEventListener('click', function() {
+    document.getElementById("comment-form-reply").style.display = 'none';
+});
+Array.prototype.forEach.call(document.querySelectorAll('[data-click=reply]'), function(el) {
+    el.addEventListener("click", function(t) {
+        t.preventDefault(),
+            document.getElemetnById("comment-editor")[0].src = el.getAttribute("data-href"),
+            el.parent.parent.nextElementSibling.appendChild(document.getElementById("comment-form-reply")[0].style.display = 'block')
+    })
+});
+document.addEventListener('scroll', function() {
+    if (check(document.querySelector('iframe[data-comment]'))) {
+        document.getElementById('enter-comment-form').src = document.querySelector('iframe[data-comment]').getAttribute("data-comment");
+        document.querySelector('iframe[data-comment]').removeAttribute('data-comment');
+    };
+    Array.prototype.forEach.call(document.querySelectorAll('img[data-image]'), function(el) {
+        if (check(el)) {
+            el.setAttribute('src', el.getAttribute('data-image'));
+            el.removeAttribute('data-image');
+        }
+    });
+})};

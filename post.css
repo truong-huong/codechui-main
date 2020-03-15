@@ -325,7 +325,7 @@ pre[class*="language-"] {
     height: 100%;
   }  
 }*/
-.comment-form-reply { 
+#comment-form-reply { 
   flex-direction: column; 
 } 
 .comments { 
@@ -438,7 +438,7 @@ pre[class*="language-"] {
   font-size:22px; 
 } 
 
-.cancel-comment { 
+#cancel-comment { 
   width:100%; 
   background-color:#888;  
   border-radius:5px;  
@@ -448,7 +448,7 @@ pre[class*="language-"] {
   box-sizing : border-box;  
 } 
 
-.cancel-comment i { 
+#cancel-comment i { 
   font-size:large;  
   color:#fff; 
 } 
