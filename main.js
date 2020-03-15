@@ -117,8 +117,8 @@
                  loadStyleScript(hongtham_style_array);
              }
          };
-         hongtham_style.rel = 'stylesheet';
-         hongtham_style.href = link;
+         hongtham.rel = 'stylesheet';
+         hongtham.href = link;
      }
   // KET THUC LAM DEP CODE
   /* onready */
