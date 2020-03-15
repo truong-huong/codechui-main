@@ -37,26 +37,9 @@ readers do not read off random characters that represent icons */
 .fa-user:before { content:"\f007"}
 .fa-folder-open:before { content:"\f07c"}
 /*  */
-
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fa-brands-400.eot");
-  src: url("fa-brands-400.eot?#iefix") format("embedded-opentype"), url("fa-brands-400.woff2") format("woff2"), url("fa-brands-400.woff") format("woff"), url("fa-brands-400.ttf") format("truetype"), url("fa-brands-400.svg#fontawesome") format("svg"); }
-
 .fab {
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400; }
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fa-regular-400.eot");
-  src: url("fa-regular-400.eot?#iefix") format("embedded-opentype"), url("fa-regular-400.woff2") format("woff2"), url("fa-regular-400.woff") format("woff"), url("fa-regular-400.ttf") format("truetype"), url("fa-regular-400.svg#fontawesome") format("svg"); }
-
 .far {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
