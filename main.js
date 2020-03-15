@@ -182,7 +182,12 @@
       /* đóng mở menu */
       (function() {
           document.querySelector('#open-menu, #close-menu').addEventListener('click', function() {
-              document.querySelector('nav > div:last-child').classList.toggle('display-block');
+              var porn =  document.querySelector('nav > div:last-child');
+              if (porn.style.display === "none") {
+                  porn.style.display = "block";
+                } else {
+                  porn.style.display = "none";
+                }
           })
 
 
