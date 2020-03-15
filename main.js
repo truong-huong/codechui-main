@@ -1,1 +1,168 @@
-icons=/\[\:(.*?)\:\]/gim;function hashtags(a){if(!a)var a=document.getElementById("body").innerHTML;return a.replace(icons,function(a){return"<span class=\"mini "+a.replace(/\[\:/gim,"").replace(/\:\]/gim,"")+"\"></span>"})}function check(a){try{var b=a.offset().top,c=b+a.outerHeight(),d=$(window).scrollTop(),e=d+$(window).height();return c>d&&b<e}catch(a){return!1}}function getLanguageScript(a){try{$.getScript("//cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-"+a+".min.js").done(function(){Prism.highlightAll()})}catch(a){}}function expand(a){for(var b=Object.keys(a),c=0;c<b.length;++c){var d=b[c],e=d.split(/,\s?/),f=a[d];delete a[d],e.forEach(function(b){a[b]=f})}return a}var languages_array=expand({"html, xml, svg, mathml":"markup",shell:"bash",js:"javascript",hs:"haskell",py:"python",adoc:"asciidoc",rbnf:"bnf",rb:"ruby",conc:"concurnas","tex, context":"latex","cs, dotnet":"csharp",coffee:"coffeescript","emacs, elisp, emacs-lisp":"lisp",sln:"solution-file",rq:"sparql",md:"markdown",jinja2:"django","dns-zone":"dns-zone-file",dockerfile:"docker",gamemakerlanguage:"gml",px:"pcaxis",objectpascal:"pascal",n4jsd:"n4js",moon:"moonscript",robot:"robotframework",sln:"solution-file",rq:"sparql",ts:"typescript",t4:"t4-cs",vb:"visual-basic",yml:"yaml"});function fixLanguages(a){var a=a;return null!=languages_array[a]&&(a=languages_array[a]),a}var codeArray=[];$(document).ready(function(){(function(){$("[data-label]").each(function(){var a=$(this).attr("data-label").trim();""==a&&(a="notfound");var b="/feeds/posts/summary/-/"+a+"?alt=json-in-script&max-results="+($(this).attr("max-results")?$(this).attr("max-results"):"4"),c=$(this);try{$.ajax({url:b,type:"get",dataType:"jsonp"}).done(function(a){c.removeAttr("data-label");var b=a.feed;if(b.entry){var d=b.entry.length;for(i=0;i<d;i++){var e=b.entry[i].link[b.entry[i].link.length-1].href,f=b.entry[i].title.$t;$("<li><a href=\""+e+"\">"+f+"</a></li>").appendTo(c.next())}}else $("<li class=\"notFoundLabel\">(-.-) Kh\xF4ng c\xF3 b\xE0i n\xE0o \u0111\u01B0\u1EE3c t\xECm th\u1EA5y [<a href=\"p/label-not-found.html\">t\xECm hi\u1EC3u th\xEAm</a>]</li>").appendTo(c.next())}).fail(function(){$("<li class=\"notFoundLabel\">(-.-) Kh\xF4ng c\xF3 b\xE0i n\xE0o \u0111\u01B0\u1EE3c t\xECm th\u1EA5y [<a href=\"p/label-not-found.html\">t\xECm hi\u1EC3u th\xEAm</a>]</li>").appendTo(c.next())})}catch(a){}})})(),function(){$("[data-click=menu]").click(function(a){a.stopPropagation(),$(".search").show(),$("header section address").hide(),$(".search label").trigger("click")}),$(".search").focusout(function(){$(".search").hide(),$("header section address").show()})}(),function(){$(".open-menu,.close-menu").click(function(){$("nav > div:last-child").toggle()})}(),function(){$("code").length&&$.getScript("//cdn.jsdelivr.net/gh/truong-huong/nullshell-js/main.js").done(function(){$("code").each(function(){try{var a=$(this).attr("class").trim().replace("language-","").trim()}catch(b){var a=$(this).parent().attr("class").trim().replace("language-","").trim()}var a=fixLanguages(a);!0==codeArray.includes(a)||(codeArray.push(a),getLanguageScript(a))})})}()});
+  //          /<!--(.*?)-->/g 
+  // THÊM ICONS VÀ HASH TAG CHO BÀI VIẾT
+     // icons = /(?<= \:\:)(.*?)(?=\s*\:\:)/gim;
+  icons = /\[\:(.*?)\:\]/gim;
+  function hashtags(text) {
+    if (!text) {
+      var text =  document.getElementById('body').innerHTML ;
+    }
+      return text.replace(
+          icons , function(str) {
+            return '<span class="mini '+str.replace(/\[\:/gim,'').replace(/\:\]/gim,'')+'"></span>' 
+      });
+  }
+  // check if ngoai screen
+  function check(e) {
+      try {
+          var elementTop = e.offset().top;
+          var elementBottom = elementTop + e.outerHeight();
+          var viewportTop = $(window).scrollTop();
+          var viewportBottom = viewportTop + $(window).height();
+          return elementBottom > viewportTop && elementTop < viewportBottom;
+      } catch(e) {
+        return false;
+      }
+  }
+    // hàm dùng làm đẹp code 
+    function expand(obj) {
+        var keys = Object.keys(obj);
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i],
+                subkeys = key.split(/,\s?/),
+                target = obj[key];
+            delete obj[key];
+            subkeys.forEach(function(key) { obj[key] = target; })
+        }
+        return obj;
+    }
+    var languages_array = expand({
+        "html, xml, svg, mathml": "markup",
+        "shell": "bash",
+        "js":"javascript",
+        "hs":"haskell",
+        "py":"python", 
+        "adoc":"asciidoc", 
+        "rbnf":"bnf",
+        "rb":"ruby", 
+        "conc":"concurnas", 
+        "tex, context":"latex",
+        "cs, dotnet":"csharp",
+        "coffee":"coffeescript", 
+        "emacs, elisp, emacs-lisp":"lisp",
+        "sln":"solution-file",
+        "rq":"sparql", 
+        "md":"markdown", 
+        "jinja2":"django", 
+        "dns-zone":"dns-zone-file", 
+        "dockerfile":"docker", 
+        "gamemakerlanguage":"gml", 
+        "px":"pcaxis", 
+        "objectpascal":"pascal", 
+        "n4jsd":"n4js", 
+        "moon":"moonscript", 
+        "robot":"robotframework", 
+        "sln":"solution-file", 
+        "rq":"sparql", 
+        "ts":"typescript", 
+        "t4":"t4-cs", 
+        "vb":"visual-basic", 
+        "yml":"yaml"
+    });
+    var codeArray = ['https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/main.js'];
+    function checkCodeLanguage(){
+      if ( $('code[class*=language-]').length ) {
+        $('code[class*=language-]').each(function(){
+          var language = 'https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-'+fixLanguages($(this).attr('class').trim().replace('language-', '').trim())+'.min.js';
+          if (codeArray.includes(language) == true){}
+            else {
+              codeArray.push(language);
+          }
+        });
+      }
+      loadLanguageScript(codeArray)
+    }
+    function loadLanguageScript(scripts){
+           var script = scripts.shift();
+           var hongtham = document.createElement('script');
+           $('head').append(hongtham);
+           hongtham.onload = function(){
+               console.log('Hong Tham da load xong');
+               if (codeArray.length) {
+                   loadLanguageScript(codeArray);
+               }
+               else {
+                   Prism.highlightAll();   
+               }
+           };
+           hongtham.src = script;    
+       }
+  function fixLanguages(language) {
+      var language = language ;
+      if ( languages_array[language] != undefined ) {
+          language = languages_array[language];
+      }
+      return language;
+  }
+  // KET THUC LAM DEP CODE
+  /* onready */
+  $(document).ready(
+    function() {
+      (function(){
+        $('[data-label]').each(
+          function(){
+            var label = $(this).attr('data-label').trim();
+            if (label == "" ) { label = 'notfound'}
+            var maxResults;
+            var url = '/feeds/posts/summary/-/' + label + '?alt=json-in-script&max-results=' + (($(this).attr('max-results')) ? $(this).attr('max-results') : '4');
+            var $this = $(this) ;
+            try {
+              $.ajax({
+                  url: url,
+                  type: "get",
+                  dataType: "jsonp"})
+                  .done( function(e) {
+                      $this.removeAttr('data-label');
+                      var feed = e.feed;
+                      if (feed.entry) {
+                          var num_post = feed.entry.length;
+                          for (i = 0; i < num_post; i++) {
+                              var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
+                              var title = feed.entry[i].title.$t;
+                              $('<li><a href="' + href + '">' + title + '</a></li>').appendTo($this.next());
+                          }
+                      } else {
+                          $('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>').appendTo($this.next());
+                      }
+                  }
+              )
+              .fail( function(e) {$('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>').appendTo($this.next());});
+            } catch(e) {};
+        })
+      })();
+      /* đóng mở search */
+      (function(){
+        $('[data-click=menu]').click(function(event){
+            event.stopPropagation();
+            $('.search').show();
+            $('header section address').hide(); 
+            $('.search label').trigger('click');
+        });
+        $('.search').focusout(function(){
+          $('.search').hide();
+          $('header section address').show();
+        });
+      })();
+      /* ddongs mowr menu */
+      (function(){
+        $('.open-menu,.close-menu').click(
+          function() {
+            $('nav > div:last-child').toggle();
+          }
+        )
+      })();
+      // goi ham lam dep code
+      (function() {
+          checkCodeLanguage();
+      })();
+    }
+  );
