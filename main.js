@@ -104,6 +104,22 @@
       }
       return language;
   }
+  var hongtham_style_array = ['//cdn.jsdelivr.net/gh/truong-huong/codechui-main/main.css',
+                                 '//truong-huong.github.io/codechui-main/fontawesome-custom/all.css',
+                                 '//truong-huong.github.io/codechui-main/font-face.css'];
+  function loadStyleScript(link){
+         var link = link.shift();
+         var hongtham = document.createElement('link');
+         $('head').append(hongtham);
+         hongtham.onload = function(){
+             console.log('Hong Tham Nguyen Thi shit ! Tham shit shit shit shit shit');
+             if (hongtham_style_array.length) {
+                 loadStyleScript(hongtham_style_array);
+             }
+         };
+         hongtham_style.rel = 'stylesheet';
+         hongtham_style.href = link;
+     }
   // KET THUC LAM DEP CODE
   /* onready */
   $(document).ready(
@@ -164,10 +180,7 @@
       // goi ham lam dep code
       (function() {
           checkCodeLanguage();
-          var hongtham_font_face = '//truong-huong.github.io/codechui-main/font-face.css';
-          var hongtham_font = document.createElement('link');
-          $('head').append(hongtham_font);
-          hongtham_font.href = hongtham_font_face ;
+          loadStyleScript(hongtham_style_array);
       })();
     }
   );
