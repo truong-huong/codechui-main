@@ -189,7 +189,7 @@
                 clientX: 20
             });
             document.querySelector('#open-menu').dispatchEvent(evt);
-          }
+          });
           document.querySelector('#open-menu').addEventListener('click', function() {
               var porn =  document.querySelector('nav > div:last-child');
               if (porn.style.display == "none") {
