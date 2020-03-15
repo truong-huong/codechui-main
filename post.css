@@ -425,9 +425,18 @@ pre[class*="language-"] {
 .comment-intro {  
   align-items:center; 
   justify-content:center; 
-  border-bottom:dashed 2px;  
+  text-align: center;
 } 
-
+.comment-intro span {
+  border-bottom:dashed 2.5px;  
+  border-top:dashed 2.5px; 
+  margin-bottom:15px; 
+}
+.comment-intro span:before , .comment-intro span:after{
+  font-family:"Font Awesome 5 Free";
+  content:"\f259";
+  margin:5px;
+}
 .comment-intro span { 
   padding:15px; 
   font-weight:bolder; 
