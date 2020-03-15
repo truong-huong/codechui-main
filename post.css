@@ -17,6 +17,9 @@ blockquote {
   color: #222;
   background-color: #f3f3f3;
 }
+.warning {
+  color:#c0580c;
+}
 .warning:before {
   content: "\f071";
   color: #FFCC01;
