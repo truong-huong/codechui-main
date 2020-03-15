@@ -101,7 +101,7 @@
   function loadLanguageScript(scripts) {
       var script = scripts.shift();
       var hongtham = document.createElement('script');
-      $('head').append(hongtham);
+      document.head.appendChild(hongtham);
       hongtham.onload = function() {
           console.log('Hong Tham Nguyen Thi shit ! Tham shit shit shit shit shit');
           if (codeArray.length) {
