@@ -105,13 +105,14 @@
       return language;
   }
   function showSidebar(callback) {
-    
-    (callback.entry) ? function(){ var length = callback.feed.entry.length; for(i=1;i<length;i++) {
-      var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
-      var title = feed.entry[i].title.$t;
-      doument.write('<li><a href="' + href + '">' + title + '</a></li>');
-    }
-    } : function(){document.write('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>')};
+    if ( callback.entry) {
+      var length = callback.feed.entry.length;
+      for(i=1;i<length;i++) {
+            var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
+            var title = feed.entry[i].title.$t;
+            doument.write('<li><a href="' + href + '">' + title + '</a></li>'); }
+      } else {
+          document.write('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>')};
   }
   
   // KET THUC LAM DEP CODE
