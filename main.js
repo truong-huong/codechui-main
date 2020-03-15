@@ -183,7 +183,7 @@
       (function() {
           document.querySelector('#open-menu, #close-menu').addEventListener('click', function() {
               var porn =  document.querySelector('nav > div:last-child');
-              if (porn.style.display === "none") {
+              if (porn.style.display == "none") {
                   porn.style.display = "block";
                 } else {
                   porn.style.display = "none";
