@@ -181,7 +181,16 @@
       })();
       /* đóng mở menu */
       (function() {
-          document.querySelector('#open-menu, #close-menu').addEventListener('click', function() {
+          document.querySelector('#close-menu').addEventListener('click', function() {
+            var evt = new MouseEvent("click", {
+                view: window,
+                bubbles: true,
+                cancelable: true,
+                clientX: 20
+            });
+            document.querySelector('#open-menu').dispatchEvent(evt);
+          }
+          document.querySelector('#open-menu').addEventListener('click', function() {
               var porn =  document.querySelector('nav > div:last-child');
               if (porn.style.display == "none") {
                   porn.style.display = "block";
@@ -189,8 +198,6 @@
                   porn.style.display = "none";
                 }
           })
-
-
       })();
       // goi ham lam dep code
       (function() {
