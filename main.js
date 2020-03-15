@@ -70,7 +70,7 @@
     });
     var codeArray = ['https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/main.js'];
     function checkCodeLanguage(){
-      if ( $('code[class*=language-]').length > 0 ) {
+      if ( $('code[class*=language-]').length) {
         $('code[class*=language-]').each(function(){
           var language = 'https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-'+fixLanguages($(this).attr('class').trim().replace('language-', '').trim())+'.min.js';
           if (codeArray.includes(language) == true){}
@@ -78,8 +78,9 @@
               codeArray.push(language);
           }
         });
+        loadLanguageScript(codeArray)
       }
-      loadLanguageScript(codeArray)
+      
     }
     function loadLanguageScript(scripts){
            var script = scripts.shift();
