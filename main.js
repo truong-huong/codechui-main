@@ -104,7 +104,14 @@
       }
       return language;
   }
-  
+  function showSidebar(callback) {
+    var length = callback.feed.entry.length;
+    (callback.entry) ? function(){
+      var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
+      var title = feed.entry[i].title.$t;
+      doument.write('<li><a href="' + href + '">' + title + '</a></li>');
+    } : function(){document.write('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>')};
+  }
   // KET THUC LAM DEP CODE
   /* onready */
   $(document).ready(
@@ -119,15 +126,6 @@
 
             script.src = 'https://codechui.blogspot.com/feeds/posts/summary/-/' + label + '?alt=json-in-script&max-results=' + (($(this).attr('max-results')) ? $(this).attr('max-results') : '4')+'&callback=showSidebar';    
         });
-
-            function showSidebar(callback) {
-              var length = callback.feed.entry.length;
-              (callback.entry) ? function(){
-                var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
-                var title = feed.entry[i].title.$t;
-                doument.write('<li><a href="' + href + '">' + title + '</a></li>');
-              } : function(){document.write('<li class="notFoundLabel">(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]</li>')};
-            }
       })();
       /* đóng mở search */
       (function(){
