@@ -142,9 +142,11 @@ header address {
   animation-duration:1s;
 }
 
-header address i {
+header address svg {
   font-size:x-large;
   min-width: 20px;
+  width:20px;
+  height:20px;
   min-height: 20px;
 }
 
