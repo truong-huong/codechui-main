@@ -144,8 +144,9 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   padding-bottom: 2px;
 }
 .postBody h2:before {
-  content: "\f5a6";
+  content: "\f292";
   margin-right: 5px;
+  color: #ADB5BD;
 }
 .postBody h3 {
   font-size: 19px;
