@@ -252,10 +252,10 @@ article div .posts * {
 }
 
 .post-info img {
-  width:112px;
-  min-width:112px;
-  min-height:112px;
-  height: 112px;
+  width:100px;
+  min-width:100px;
+  min-height:100px;
+  height: 100px;
   margin-right:10px;
   border-radius:10px;
 }
