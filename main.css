@@ -178,6 +178,8 @@ header address a {
   justify-content:flex-start;
 }
 .open-menu {
+  width: 30px;
+  height: 30px;
   text-align:center;
   display:none;
   position:absolute;
@@ -187,6 +189,10 @@ header address a {
   border-radius:5px;
   width:50px;
   background-color:#f1f1f1;
+}
+.open-menu svg {
+  width: 26px;
+  height: 26px;
 }
 /* ARTIVE */
 
