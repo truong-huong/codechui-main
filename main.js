@@ -120,7 +120,7 @@
       }
       return language;
   }
-  
+  document.addEventListener("DOMContentLoaded", function() {
       (function() {
           var data_label = document.querySelectorAll('[data-label]');
           Array.prototype.forEach.call(data_label, function(el, i) {
@@ -201,4 +201,4 @@
       (function() {
           checkCodeLanguage();
       })();
- 
+  });
