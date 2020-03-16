@@ -114,13 +114,13 @@ header img {
   border-radius:50%;
 }
 
-header cite,
+header .cite,
 .web-intro  {
   margin-bottom:10px;
   text-align:center;
 }
 
-header cite span{
+header .cite span{
   font-size:25px;
   font-weight:bolder;
 }
