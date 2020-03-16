@@ -103,7 +103,7 @@ blockquote {
 .btn-group .btn {
   margin:20px;
 }
-.postBody b {
+.postBody b , del {
     display:inline-block;
 }
 /* phong to chu */
@@ -150,17 +150,8 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   color: #ADB5BD;
   font-size: 26px;
 }
-.postBody h3 {
+.postBody h3,.postBody h4,.postBody h5,.postBody h6 {
   font-size: 19px;
-}
-.postBody h4 {
-  font-size: 17px;
-}
-.postBody h5 {
-  font-size: 16px
-}
-.postBody h6 {
-  font-size: 15px;
 }
 /** heets */
 
