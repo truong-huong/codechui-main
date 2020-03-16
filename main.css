@@ -265,8 +265,10 @@ article div .posts * {
   font-size:14px;
   color:#383737;
 }
-.straight a i {
+.straight a svg {
   margin-right:5px;
+  width:14px;
+  height:14px;
   margin-left:5px;
 }
 .label {
