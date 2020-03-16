@@ -429,7 +429,22 @@ footer section div:last-child {
       -webkit-flex-flow:row wrap;
   }
 }
-
+@media (max-width:400px) {
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .post-info {
+    width: 100%;
+    min-width: 100%;
+    height: 150px;
+    min-height: 150px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+}
 @media (max-width:425px) {
   nav {
     width:100%;
