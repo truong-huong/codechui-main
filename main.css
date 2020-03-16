@@ -125,15 +125,15 @@ header cite {
   font-size:25px;
   font-weight:bolder;
 }
-.web-intro {
-  font-size:22px;
-  font-weight:bold;
-}
 .web-intro ,
 footer h6 {
   font-size:16px;
 }
-
+.web-intro {
+  font-size:22px;
+  font-weight:bold;
+  font-style: normal;
+}
 header address {
   flex-direction:row;
   flex-wrap:nowrap;
