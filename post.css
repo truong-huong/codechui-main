@@ -116,6 +116,7 @@ b>ins{
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
+  float:left;
 }
 h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-weight: 900;
