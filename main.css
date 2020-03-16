@@ -396,7 +396,11 @@ footer section div:last-child {
     margin-top:50px;
   }
 }
-
+@media (min-width:1000px) {
+  .web-intro {
+    max-width:80%;
+  }
+}
 @media (max-width:582px) {
   article,
   aside {
