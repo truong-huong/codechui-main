@@ -103,8 +103,8 @@ blockquote {
 .btn-group .btn {
   margin:20px;
 }
-b {
-  display: block;
+.postBody b {
+    display:inline-block;
 }
 /* phong to chu */
 b>ins{
@@ -148,9 +148,6 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   margin-right: 5px;
   color: #ADB5BD;
   font-size: 26px;
-}
-.postBody b {
-    display:inline-block;
 }
 .postBody h3 {
   font-size: 19px;
