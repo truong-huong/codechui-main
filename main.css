@@ -122,10 +122,13 @@ header cite,
 }
 
 header cite {
-  font-size:xx-large;
+  font-size:25px;
   font-weight:bolder;
 }
-
+.web-intro {
+  font-size:22px;
+  font-weight:bold;
+}
 .web-intro ,
 footer h6 {
   font-size:16px;
