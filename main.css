@@ -116,12 +116,11 @@ header img {
 
 header cite,
 .web-intro  {
-  display:inline-block;
   margin-bottom:10px;
   text-align:center;
 }
 
-header cite {
+header cite span{
   font-size:25px;
   font-weight:bolder;
 }
