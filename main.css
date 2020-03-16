@@ -266,7 +266,7 @@ article div .posts * {
   color:#383737;
 }
 .straight a {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
 }
