@@ -15,28 +15,6 @@ src:local('Inconsolata Regular'),local('Inconsolata-Regular'),
   font-display:swap;
 }
 /* font awesome */
-@font-face {
-font-family: 'Font Awesome 5 Brands';
-font-style: normal;F
-font-weight: 400;
-font-display: swap;
-src: url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-brands-400.eot");
-src: url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-brands-400.woff2") format("woff2"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-brands-400.woff") format("woff"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-brands-400.ttf") format("truetype"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-brands-400.svg#fontawesome") format("svg"); }
-
-@font-face {
-font-family: 'Font Awesome 5 Free';
-font-style: normal;
-font-weight: 400;
-font-display: swap;
-src: url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-regular-400.eot");
-src: url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-regular-400.woff2") format("woff2"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-regular-400.woff") format("woff"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-regular-400.ttf") format("truetype"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-regular-400.svg#fontawesome") format("svg"); }
-@font-face {
-font-family: 'Font Awesome 5 Free';
-font-style: normal;
-font-weight: 900;
-font-display: swap;
-src: url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-solid-900.eot");
-src: url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-solid-900.woff2") format("woff2"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-solid-900.woff") format("woff"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-solid-900.ttf") format("truetype"), url("//truong-huong.github.io/codechui-main/fontawesome-custom/fa-solid-900.svg#fontawesome") format("svg"); }
 /* css không cần thiết tải trước */
 img:hover {
   -webkit-filter:grayscale(1); /* Safari 6.0 - 9.0 */
