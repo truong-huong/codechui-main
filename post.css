@@ -16,11 +16,6 @@ blockquote {
   margin: 0;
   background-color: #f3f3f3;
 }
-a:not([style]) img {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 .warning {
   color:#c0580c;
 }
@@ -108,11 +103,11 @@ a:not([style]) img {
 .btn-group .btn {
   margin:20px;
 }
-b {
-  display: block;
+.postBody b , del {
+    display:inline-block;
 }
 /* phong to chu */
-b>strike{
+b>ins{
   text-decoration-line: none;
   color: #903;
   float: left;
@@ -121,6 +116,7 @@ b>strike{
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
+  float:left;
 }
 h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-weight: 900;
@@ -136,6 +132,7 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-size: 27px;
   width: 100%;
   text-align: center;
+  margin-bottom: 50px;
 }
 .postBody h2 ,.postBody h3,.postBody h4,.postBody h5,.postBody h6
 {
@@ -148,20 +145,13 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   padding-bottom: 2px;
 }
 .postBody h2:before {
-  content: "\f5a6";
+  content: "\f292";
   margin-right: 5px;
+  color: #ADB5BD;
+  font-size: 26px;
 }
-.postBody h3 {
+.postBody h3,.postBody h4,.postBody h5,.postBody h6 {
   font-size: 19px;
-}
-.postBody h4 {
-  font-size: 17px;
-}
-.postBody h5 {
-  font-size: 16px
-}
-.postBody h6 {
-  font-size: 15px;
 }
 /** heets */
 
@@ -330,10 +320,11 @@ pre[class*="language-"] {
     height: 100%;
   }  
 }*/
-.comment-form-reply { 
+#comment-form-reply { 
   flex-direction: column; 
 } 
 .comments { 
+  width:100%;
   margin-top:50px;  
   flex-direction: column;
   margin-bottom:25px;
@@ -443,7 +434,7 @@ pre[class*="language-"] {
   font-size:22px; 
 } 
 
-.cancel-comment { 
+#cancel-comment { 
   width:100%; 
   background-color:#888;  
   border-radius:5px;  
@@ -453,7 +444,7 @@ pre[class*="language-"] {
   box-sizing : border-box;  
 } 
 
-.cancel-comment i { 
+#cancel-comment i { 
   font-size:large;  
   color:#fff; 
 } 
