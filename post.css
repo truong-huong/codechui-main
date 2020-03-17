@@ -1,7 +1,6 @@
 .postBody a:before , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
-
 div > blockquote:before {
   margin-bottom:5px;
   margin: 0 5px;
@@ -103,11 +102,11 @@ blockquote {
 .btn-group .btn {
   margin:20px;
 }
-.postBody b , del {
+.postBody b , strike  {
     display:inline-block;
 }
 /* phong to chu */
-b>ins{
+b>strike {
   text-decoration-line: none;
   color: #903;
   float: left;
@@ -160,7 +159,6 @@ h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
   font-size: 19px;
 }
 /** heets */
-
 code {
   padding:2px 5px;
 }
@@ -184,7 +182,6 @@ font-family:'Inconsolata',monospace;
   -ms-hyphens:none; 
   hyphens:none; 
 } 
-
 pre[class*="language-"]::-moz-selection,  
 pre[class*="language-"]::-moz-selection,  
 code[class*="language-"]::-moz-selection, 
@@ -192,7 +189,6 @@ code[class*="language-"]::-moz-selection {
   text-shadow:none; 
   background:#b3d4fc; 
 } 
-
 pre[class*="language-"]::selection, 
 pre[class*="language-"]::selection, 
 code[class*="language-"]::selection,  
@@ -200,48 +196,39 @@ code[class*="language-"]::selection {
   text-shadow:none; 
   background:#b3d4fc; 
 } 
-
 @media print {  
   code[class*="language-"], 
   pre[class*="language-"] { 
     text-shadow:none; 
   } 
 } 
-
 /* Code blocks */ 
-
-      pre[class*="language-"] { 
+pre[class*="language-"] { 
   padding:1em;  
   margin:.5em 0;  
   overflow:auto;  
 } 
-
 :not(pre) > code[class*="language-"], 
 pre[class*="language-"] { 
   background:#f5f2f0; 
 } 
-
 /* Inline code */:not(pre) > code[class*="language-"] { 
   padding:.1em; 
   border-radius:.3em; 
   white-space:normal; 
 } 
-
 .token.comment, 
 .token.prolog,  
 .token.doctype, 
 .token.cdata {  
   color:slategray;  
 } 
-
 .token.punctuation {  
   color:#999; 
 } 
-
 .token.namespace {  
   opacity:.7; 
 } 
-
 .token.property,  
 .token.tag, 
 .token.boolean, 
@@ -251,7 +238,6 @@ pre[class*="language-"] {
 .token.deleted {  
   color:#905; 
 } 
-
 .token.selector,  
 .token.attr-name, 
 .token.string,  
@@ -260,7 +246,6 @@ pre[class*="language-"] {
 .token.inserted { 
   color:#690; 
 } 
-
 .token.operator,  
 .token.entity,  
 .token.url, 
@@ -269,40 +254,32 @@ pre[class*="language-"] {
   color:#9a6e3a;  
   background:hsla(0,0%,100%,.5);  
 } 
-
 .token.atrule,  
 .token.attr-value,  
 .token.keyword {  
   color:#07a; 
 } 
-
 .token.function,  
 .token.class-name { 
   color:#DD4A68;  
 } 
-
 .token.regex, 
 .token.important, 
 .token.variable { 
   color:#e90; 
 } 
-
 .token.important, 
 .token.bold { 
   font-weight:bold; 
 } 
-
 .token.italic { 
   font-style:italic;  
 } 
-
 .token.entity { 
   cursor:help;  
 } 
-/* comment */ 
-/* comments */  
-/*
-  --aspect-ratio: 16/9;
+/* comments *
+  --aspect-ratio: 16/9; 
 } 
 [style*="--aspect-ratio"] > :first-child {
   width: 100%;
@@ -336,22 +313,18 @@ pre[class*="language-"] {
   margin-bottom:25px;
   border-bottom:solid 2px;
 } 
-
 .first {  
   margin-bottom:20px; 
 } 
-
 .second-container { 
   margin-left:30px; 
   border-left:solid 1.5px #888; 
   padding-left:5px; 
 } 
-
 .somebody { 
   flex-direction:row; 
   align-items:center; 
 } 
-
 .has-stated { 
   padding:10px; 
   margin-left:20px; 
@@ -361,12 +334,10 @@ pre[class*="language-"] {
   justify-content:flex-start; 
   flex-direction:column;  
 } 
-
 .second-body-comment {  
   border-left:solid 1.5px #888; 
   padding-left:5px; 
 } 
-
 .second-remove-comment {  
   padding:5px;  
   border-radius:50%;  
@@ -374,39 +345,32 @@ pre[class*="language-"] {
   color:#888; 
   margin-right:10px;  
 } 
-
 .second .has-stated { 
   flex-direction:row; 
   width:100%; 
   justify-content:flex-start; 
 } 
-
 .somebody-avata img { 
   width:40px; 
   height:40px;  
   border-radius:50%;  
   margin-right:10px;  
 } 
-
 #comments { 
   flex-direction:column-reverse;  
   margin-top:30px;  
 } 
-
 .somebody > div:last-child {  
   flex-direction:column;  
 } 
-
 .somebody-name {  
   font-size:large;  
   font-weight:bold; 
 } 
-
 .somebody-time {  
   font-size:small;  
   color:#888; 
 } 
-
 .criticisms { 
   margin-top:10px;  
   padding-top:10px; 
@@ -414,11 +378,9 @@ pre[class*="language-"] {
   color:#777; 
   font-size:small;  
 } 
-
 .criticisms a:not(:last-child) {  
   margin-right:10px;  
 } 
-
 .comment-intro {  
   align-items:center; 
   justify-content:center; 
@@ -439,7 +401,6 @@ pre[class*="language-"] {
   font-weight:bolder; 
   font-size:22px; 
 } 
-
 #cancel-comment { 
   width:100%; 
   background-color:#888;  
@@ -449,7 +410,6 @@ pre[class*="language-"] {
   padding:10px; 
   box-sizing : border-box;  
 } 
-
 #cancel-comment i { 
   font-size:large;  
   color:#fff; 
