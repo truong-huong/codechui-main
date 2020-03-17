@@ -102,7 +102,7 @@ blockquote {
 .btn-group .btn {
   margin:20px;
 }
-.postBody b , strike  {
+.postBody b{
     display:inline-block;
 }
 /* phong to chu */
