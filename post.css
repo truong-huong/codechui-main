@@ -109,7 +109,7 @@ blockquote {
 b>strike {
   text-decoration-line: none;
   color: #903;
-  float: left;
+  float: inherit;
   font-size: 50px;
   line-height: 45px;
   padding-top: 4px;
