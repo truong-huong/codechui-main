@@ -86,6 +86,7 @@ footer address,
 }
 .sub ul li:hover a {
   color: #d25081 ;
+  font-weight: bolder;
 }
 /* HEADER */
 /* search */
