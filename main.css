@@ -114,6 +114,7 @@ header .cite,
 header .cite span{
   font-size:50px;
   font-weight:bolder;
+  text-transform: uppercase;
 }
 .web-intro ,
 footer h6 {
