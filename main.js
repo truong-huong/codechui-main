@@ -115,7 +115,7 @@ function fixLanguages(language) {
   }
   return language;
 }
-doc.addEventListener("load", function() {
+window.addEventListener("load", function() {
   (function() {
   var data_label = doc.querySelectorAll('[data-label]');
   Array.prototype.forEach.call(data_label, function(el, i) {
