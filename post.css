@@ -327,6 +327,7 @@ pre[class*="language-"] {
 }
 .postBody ul {
   margin: 0;
+  list-style: none;
 }
 .postBody ul li:nth-child(odd){
   background: #DDDDDD;
