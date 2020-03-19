@@ -324,7 +324,13 @@ pre[class*="language-"] {
 .somebody { 
   flex-direction:row; 
   align-items:center; 
-} 
+}
+.postBody ul {
+  margin: 0;
+}
+.postBody ul li:nth-child(odd){
+  background: #DDDDDD;
+}
 .has-stated { 
   padding:10px; 
   margin-left:20px; 
