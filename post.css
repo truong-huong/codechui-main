@@ -1,4 +1,4 @@
-.postBody a:before , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
+.postBody ul li:before , .postBody a:before , div > blockquote:before , blockquote p:before, .btn a:before,h1:before,h2:before,h3:before,h4:before,h5:before,h6:before{
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
 div > blockquote:before {
@@ -328,6 +328,12 @@ pre[class*="language-"] {
 .postBody ul {
   margin: 0;
   list-style: none;
+  padding-left: 20px;
+}
+.postBody ul li:before {
+  content: "\f0a4";
+  margin-right: 5px;
+  color: #ADB5BD;
 }
 .postBody ul li:nth-child(odd){
   background: #DDDDDD;
