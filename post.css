@@ -334,6 +334,7 @@ pre[class*="language-"] {
   content: "\f0a4";
   margin-right: 5px;
   color: #ADB5BD;
+  background:#fff;
 }
 .postBody ul li:nth-child(odd){
   background: #DDDDDD;
