@@ -188,6 +188,19 @@ window.addEventListener("load", function() {
         }
     })
   })();
+  // lazy laod images
+  (function(){
+      var img = doc.querySelectorAll('.posts img');
+      Array.prototype.forEach.call(img, function(el) {
+        el.addEventListener('scroll',function(){
+          if (check(el)){
+            el.setAttribute('src',el.getAttribute('data-src'));
+            el.removeAttribute('data-src');
+            el.removeEventListener();
+          }
+        })
+      })
+  })();
   // goi ham lam dep code
   (function() {
       checkCodeLanguage();
