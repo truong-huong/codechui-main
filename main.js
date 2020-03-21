@@ -40,8 +40,8 @@ function check(el) {
 // Chuyên dùng để load code làm đẹp 
 function expand(obj) {
   var keys = Object.keys(obj);
-  for (var i = 0; i < keys.length; ++i) {
-      var key = keys[i],
+  for (let i = 0; i < keys.length; ++i) {
+      let key = keys[i],
           subkeys = key.split(/,\s?/),
           target = obj[key];
       delete obj[key];
@@ -87,7 +87,7 @@ var codeArray = ['https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/main.js'
 function checkCodeLanguage() {
   if (doc.querySelectorAll('code[class*=language-]').length) {
     Array.prototype.forEach.call(doc.querySelectorAll('code[class*=language-]'), function(el, i) {
-      var language = 'https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-' + fixLanguages(el.getAttribute('class').trim().replace('language-', '').trim()) + '.min.js';
+      let language = 'https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-' + fixLanguages(el.getAttribute('class').trim().replace('language-', '').trim()) + '.min.js';
       if (codeArray.includes(language) == true) {} else {
           codeArray.push(language);
       }
@@ -119,9 +119,9 @@ window.addEventListener("load", function() {
   (function() {
   var data_label = doc.querySelectorAll('[data-label]');
   Array.prototype.forEach.call(data_label, function(el, i) {
-    var label = el.getAttribute('data-label').trim();
+    let label = el.getAttribute('data-label').trim();
     if (label == "") {
-        label = 'notfound'
+        let label = 'notfound'
     };
     var maxResults;
     var url = '/feeds/posts/summary/-/' + label + '?alt=json&max-results=' + ((el.getAttribute('max-results')) ? el.getAttribute('max-results') : '4');
